@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     # 그래프QL
     'graphene_django',
     # 앱
+    'grephql',
     'table',
 ]
 
