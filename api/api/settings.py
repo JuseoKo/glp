@@ -23,6 +23,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 그래프QL
+    'graphene_django',
+    # 앱
     'table',
 ]
 
