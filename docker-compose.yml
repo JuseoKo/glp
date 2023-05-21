@@ -1,10 +1,22 @@
 version: '3.9'
 services:
   db:
-    image: postgres
+    image: postgres:database
     ports:
       - '5432:5432'
+    volumes:
+      - db:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
       - POSTGRES_DB=db
+      - POSTGRES_PASSWORD=password
+#      - PGDATA=/var/lib/postgresql/data/db-files/
+    build:
+      dockerfile: ./POSTGRESQL/Dockerfile
+volumes:
+    db:
+      driver: "local" # 로컬드라이버를 이용
+      driver_opts:
+        type: "none" # 타입을 안씀
+        o: "bind" # 컨테이너와 로컬디비와 바인딩 한다는 의미
+        device: "/Users/maria/Desktop/docker/postgres" #경로
