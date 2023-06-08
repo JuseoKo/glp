@@ -3,7 +3,7 @@ services:
   db:
     image: postgres:database
     ports:
-      - '8282:8282'
+      - '8282:5432' # 외부포트:내부포트
     volumes:
       - db:/var/lib/postgresql/data
     environment:
