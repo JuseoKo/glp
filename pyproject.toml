@@ -1,0 +1,35 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "api"
+version = "0.1.0"
+description = "api-server"
+
+# Python 버전 설정
+python = "^3.11"
+
+[tool.poetry.dependencies]
+# 유틸리티 라이브러리
+pandas = '2.0.1'
+numpy = '1.24.3'
+requests = '2.30.0'
+beautifulsoup4 = '4.12.2'
+black = '23.3.0'
+loguru = '0.7.0'
+#장고 관련 라이브러리
+Django = '4.2.1'
+graphene = '3.2.2'
+graphene-django = '3.0.2'
+graphql-core = '3.2.3'
+graphql-relay = '3.2.0'
+#테스트 라이브러리
+pytest = '7.3.1'
+pytest-django = '4.5.2'
+#postgresql 관련 라이브러리
+psycopg2-binary = '2.9.6'
+psycopg = '3.1.9'
+
+[tool.pytest.ini_options]
+#pytest는 manage.py 루트폴더에 관련 설정이 존재
