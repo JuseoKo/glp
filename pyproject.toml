@@ -18,6 +18,7 @@ requests = '2.30.0'
 beautifulsoup4 = '4.12.2'
 black = '23.3.0'
 loguru = '0.7.0'
+bardapi = '0.1.11'
 #장고 관련 라이브러리
 Django = '4.2.1'
 graphene = '3.2.2'
@@ -27,9 +28,18 @@ graphql-relay = '3.2.0'
 #테스트 라이브러리
 pytest = '7.3.1'
 pytest-django = '4.5.2'
+testcontainers = '3.7.1'
+sqlalchemy =  '2.0.16'
 #postgresql 관련 라이브러리
 psycopg2-binary = '2.9.6'
 psycopg = '3.1.9'
 
 [tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "api.settings"
+addopts = "-vvs --create-db --nomigrations"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+log_cli_level = "debug"
+markers = [
+    "unit: marks for unit test",
+]
 #pytest는 manage.py 루트폴더에 관련 설정이 존재

@@ -18,5 +18,5 @@ volumes:
       driver: "local" # 로컬드라이버를 이용
       driver_opts:
         type: "none" # 타입을 안씀
-        o: "bind" # 컨테이너와 로컬디비와 바인딩 한다는 의미
-        device: "/Users/maria/Desktop/docker/postgres" #경로
+        o: "bind" # 컨테이너와 로컬DB와 바인딩 한다는 의미
+        device: "/Users/maria/Desktop/docker/postgres" # 바인딩 경로
