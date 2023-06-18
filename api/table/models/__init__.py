@@ -1,4 +1,4 @@
-from .test import Test
+# import news
 from table.models import news
 
-__all__ = ["news", "Test"]
+__all__ = ["news"]

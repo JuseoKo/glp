@@ -13,7 +13,6 @@ class Bard():
 
 def Bard_api(input_text: str):
 
-    input_test = input_text
-    response = bardapi.core.Bard().get_answer(input_test)
+    response = bardapi.core.Bard().get_answer(input_text)
 
     return response

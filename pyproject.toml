@@ -6,11 +6,11 @@ build-backend = "poetry.core.masonry.api"
 name = "api"
 version = "0.1.0"
 description = "api-server"
-
-# Python 버전 설정
-python = "^3.11"
+authors = ['']
 
 [tool.poetry.dependencies]
+# Python 버전 설정
+python = "^3.11"
 # 유틸리티 라이브러리
 pandas = '2.0.1'
 numpy = '1.24.3'

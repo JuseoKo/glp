@@ -1,11 +1,11 @@
 from graphene import relay
 import graphene
 from graphene_django import DjangoObjectType
-from table.models.test import Test
+from table.models.news import NewsValues
 
 class TestsObject(DjangoObjectType):
     class Meta:
-        model = Test
+        model = NewsValues
 
 class Query(graphene.ObjectType):
     # _a : A 이런식으로 언더바가 대문자를 뜻함
