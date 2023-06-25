@@ -8,6 +8,6 @@ class Command(BaseCommand):
         import bardapi
         import os
         os.environ['_BARD_API_KEY'] = 'WwhgnwX5QtrnLMhhPxuTOytu2bzZwZRyxoJsIa6uoG8kedYITApdXCNMXcPm-NfLqGTlmQ.'
-        input_test = '좋은 저녁이'
+        input_test = '좋은 저녁이야'
         response = bardapi.core.Bard().get_answer(input_test)
         print(response)

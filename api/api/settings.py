@@ -29,8 +29,6 @@ INSTALLED_APPS = [
     'grephql',
     'table',
     'bard',
-    # 서브 db 앱
-    'servetable',
 ]
 
 MIDDLEWARE = [
@@ -75,17 +73,8 @@ DATABASES = {
         'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '5432',
-    },
-    'serve': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'serve',
-        'USER': 'postgres',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '5432',
     }
 }
-DATABASE_ROUTERS = ['api.routers.DBRouter']
 
 
 # Password validation
